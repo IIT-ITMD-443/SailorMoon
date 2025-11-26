@@ -378,13 +378,13 @@ html[data-theme="venus"] body {
     width: 90vw;
   }
   .character-img {
-    max-width: 360px !important;
+    max-width: 260px !important;
     height: auto !important;
     margin: 0 auto;
     display: block;
   }
   .character-card {
-    max-width: 480px;
+    max-width: 380px;
     margin: 0 auto;
   }
   .characters-container {
