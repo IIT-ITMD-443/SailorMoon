@@ -304,15 +304,6 @@ body.dark-mode .icon-btn img {
   background: rgba(255,255,255,0.18);
 }
 
-/* RESPONSIVE */
-
-@media (max-width: 600px) {
-  .palette-dropdown {
-    width: 90vw;
-    right: 5vw;
-  }
-}
-
 /* SCOUT THEMES */
 
 html[data-theme="moon"] body {
@@ -329,6 +320,76 @@ html[data-theme="jupiter"] body {
 }
 html[data-theme="venus"] body {
   --heading-color: #ffc14d;
+}
+
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 14px;
+  }
+
+  .navbar .d-flex {
+    justify-content: center !important;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .icon-controls {
+    justify-content: center;
+  }
+
+  .row {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .row > [class*="col"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+  }
+
+  /* protect navbar icons */
+  .icon-btn img {
+    width: 24px !important;
+    height: 24px !important;
+    max-width: none !important;
+  }
+
+  /* scale only content images */
+  .hero-image,
+  .anime-cover,
+  .character-img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* center palette panel */
+  .palette-dropdown {
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    width: 90vw;
+  }
+  .character-img {
+    max-width: 360px !important;
+    height: auto !important;
+    margin: 0 auto;
+    display: block;
+  }
+  .character-card {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  .characters-container {
+    max-width: 100%;
+  }
 }
 
 

@@ -2,7 +2,7 @@
   <nav class="navbar px-3">
 
     <RouterLink to="/" class="navbar-brand">
-      🌙 Sailor Site
+      Sailor Site
     </RouterLink>
 
     <div class="d-flex gap-3">
