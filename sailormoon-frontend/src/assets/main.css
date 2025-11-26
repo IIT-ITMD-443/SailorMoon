@@ -327,6 +327,7 @@ html[data-theme="venus"] body {
 
 @media (max-width: 768px) {
 
+  /* NAVBAR */
   .navbar {
     flex-direction: column !important;
     align-items: center !important;
@@ -344,6 +345,7 @@ html[data-theme="venus"] body {
     justify-content: center;
   }
 
+  /* FORCE 1 COLUMN LAYOUT */
   .row {
     display: flex !important;
     flex-direction: column !important;
@@ -355,14 +357,14 @@ html[data-theme="venus"] body {
     flex: 0 0 100% !important;
   }
 
-  /* protect navbar icons */
+  /* FIX NAV ICON IMAGES */
   .icon-btn img {
     width: 24px !important;
     height: 24px !important;
     max-width: none !important;
   }
 
-  /* scale only content images */
+  /* CONTENT IMAGES */
   .hero-image,
   .anime-cover,
   .character-img {
@@ -370,26 +372,38 @@ html[data-theme="venus"] body {
     height: auto;
   }
 
-  /* center palette panel */
+  /* CENTER COLOR PALETTE */
   .palette-dropdown {
     left: 50% !important;
     right: auto !important;
     transform: translateX(-50%) !important;
     width: 90vw;
   }
-  .character-img {
-    max-width: 260px !important;
-    height: auto !important;
-    margin: 0 auto;
-    display: block;
+
+  /* CHARACTER CARD FIX */
+  .characters-container .col-md-6 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    display: flex;
+    justify-content: center;
   }
+
   .character-card {
-    max-width: 380px;
+    width: 360px !important;
+    max-width: 360px !important;
     margin: 0 auto;
   }
-  .characters-container {
-    max-width: 100%;
+
+}
+
+/* iPhone specific tightening */
+@media (max-width: 480px) {
+
+  .character-card {
+    width: 240px !important;
+    max-width: 240px !important;
   }
+
 }
 
 
