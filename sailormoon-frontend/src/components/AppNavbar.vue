@@ -11,7 +11,7 @@
       <RouterLink to="/characters">Characters</RouterLink>
     </div>
 
-    <div class="icon-controls ms-3">
+    <div class="icon-controls">
 
       <!-- Palette Button -->
       <button class="icon-btn theme-btn" @click="togglePalette">
