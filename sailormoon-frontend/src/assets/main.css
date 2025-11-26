@@ -1,29 +1,15 @@
-.navbar {
-  margin-bottom: 50px;
-}
-
-.card {
-  margin-bottom: 36px;
-}
-
-.container > * {
-  margin-bottom: 40px;
-}
-/* --------------------
-   VARIABLES
--------------------- */
+/* VARIABLES */
 
 :root {
   --accent-color: #ff70b5;
+  --heading-color: #5a005f;
   --bg-color: #fff7fb;
   --text-color: #5a005f;
   --card-bg: #fff2fa;
   --border-color: rgba(255, 180, 220, 0.7);
 }
 
-/* --------------------
-   BASE
--------------------- */
+/* BASE */
 
 * {
   margin: 0;
@@ -38,9 +24,22 @@ body {
   transition: background 0.4s ease, color 0.4s ease;
 }
 
-/* --------------------
-   NAVBAR
--------------------- */
+/* CONTAINERS */
+
+.container > * {
+  margin-bottom: 40px;
+}
+
+.characters-container {
+  max-width: 900px;
+}
+
+.home-container {
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+/* NAVBAR */
 
 .navbar {
   background-color: #fffafc;
@@ -49,6 +48,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 50px;
 }
 
 .navbar a {
@@ -75,9 +75,7 @@ body {
   color: var(--accent-color);
 }
 
-/* --------------------
-   BUTTONS
--------------------- */
+/* BUTTONS */
 
 button {
   background-color: #ffd9ec;
@@ -90,11 +88,7 @@ button {
   transition: all 0.2s ease;
 }
 
-
-
-/* --------------------
-   CARDS
--------------------- */
+/* CARDS */
 
 .card {
   background-color: var(--card-bg);
@@ -103,6 +97,7 @@ button {
   border: 2px solid var(--border-color);
   box-shadow: 0 8px 18px rgba(255, 130, 200, 0.18);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+  margin-bottom: 36px;
 }
 
 .card:hover {
@@ -110,32 +105,130 @@ button {
   box-shadow: 0 12px 26px rgba(255, 130, 200, 0.28);
 }
 
-/* --------------------
-   TEXT
--------------------- */
+.character-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* change this */
+  align-items: center;       /* add this */
+}
+
+/* HOME HERO SECTION */
+
+.main-title {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: #7a0072;
+}
+
+.hero-card {
+  padding: 50px 30px;
+  background-color: var(--card-bg);
+  box-shadow: 0 15px 35px rgba(255, 130, 200, 0.15);
+}
+
+.hero-content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 36px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 650px;
+  margin: 30px auto;
+  border-radius: 18px;
+  display: block;
+}
+
+.hero-text {
+  font-size: 17px;
+  line-height: 1.9;
+  color: #6b005c;
+}
+
+/* TEXT */
 
 h1, h2, h3 {
   letter-spacing: 0.5px;
+  color: var(--heading-color);
 }
 
 p {
   line-height: 1.6;
 }
 
-/* --------------------
-   DARK MODE
--------------------- */
+/* ICONS */
+
+.icon-controls {
+  display: flex;
+  gap: 12px;
+}
+
+.icon-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #ffe1f0;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(255,130,200,0.3);
+}
+
+.icon-btn img {
+  width: 24px;
+  height: 24px;
+  filter: invert(0);
+  transition: filter 0.3s ease;
+}
+
+/* IMAGES */
+
+.character-img {
+  width: 100%;
+  max-width: 320px;    /* bigger */
+  height: 320px;       /* bigger */
+  object-fit: contain;
+  margin: 0 auto 10px;
+  display: block;
+}
+
+/* DARK MODE */
 
 body.dark-mode {
-  --bg-color: #16001e;
-  --text-color: #f9d8ff;
-  --card-bg: rgba(255, 255, 255, 0.05);
-  --border-color: rgba(255, 160, 255, 0.25);
+  --bg-color: #1b0126;        /* richer, smoother purple */
+  --text-color: #f5d7ff;      /* soft readable lavender */
+  --card-bg: rgba(255, 255, 255, 0.06);
+  --border-color: rgba(255, 180, 255, 0.28);
+  --heading-color: #f4c2ff; /* default purple for dark mode */
+}
+
+body.dark-mode .hero-text {
+  color: #f2caff;
+}
+
+body.dark-mode .subtitle {
+  color: #f2caff;
 }
 
 body.dark-mode .navbar {
-  background-color: #240036;
-  border-bottom: 2px solid rgba(255, 100, 240, 0.3);
+  background-color: #2e0044;  /* softer navbar purple */
 }
 
 body.dark-mode button {
@@ -147,12 +240,95 @@ body.dark-mode .card {
   box-shadow: 0 10px 25px rgba(150, 0, 255, 0.25);
 }
 
-body.dark-mode h1,
-body.dark-mode h2,
-body.dark-mode h3 {
-  color: #ffd6ff;
-}
-
 body.dark-mode p {
   color: #f2caff;
 }
+
+/* Change icon tone in dark mode */
+body.dark-mode .icon-btn {
+  background: #3a0050;
+}
+
+body.dark-mode .icon-btn img {
+  filter: invert(1);
+}
+
+/* PALETTE DROPDOWN PANEL */
+
+.palette-dropdown {
+  position: fixed;       
+  top: 80px;
+  right: 16px;
+  width: 240px;
+  border-radius: 22px;
+  background: rgba(75, 19, 122, 0.95);
+  padding: 20px 16px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.45);
+  border: 2px solid rgba(255,255,255,0.1);
+  z-index: 9999;         
+  backdrop-filter: blur(10px);
+}
+
+.dropdown-title {
+  color: #f3c6ff;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+/* SCOUT OPTIONS */
+
+.scout-option {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: white;
+}
+
+.scout-option:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.scout-dot {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+}
+
+.active-scout {
+  background: rgba(255,255,255,0.18);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+  .palette-dropdown {
+    width: 90vw;
+    right: 5vw;
+  }
+}
+
+/* SCOUT THEMES */
+
+html[data-theme="moon"] body {
+  --heading-color: #ff70b5;
+}
+html[data-theme="mercury"] body {
+  --heading-color: #70b7ff;
+}
+html[data-theme="mars"] body {
+  --heading-color: #ff6b6b;
+}
+html[data-theme="jupiter"] body {
+  --heading-color: #66e37a;
+}
+html[data-theme="venus"] body {
+  --heading-color: #ffc14d;
+}
+
+

@@ -18,10 +18,13 @@ export default {
   data() {
     return {
       animes: [
-        { title: 'Sailor Moon', desc: 'Magical girl classic.' },
-        { title: 'Cardcaptor Sakura', desc: 'Pastel magic vibes.' },
-        { title: 'Fruits Basket', desc: 'Emotional story.' }
-      ]
+      { title: 'Naruto', desc: 'A ninja who dreams of becoming the strongest leader of his village.' },
+      { title: 'Attack on Titan', desc: 'Humanity fights for survival against giant Titans.' },
+      { title: 'Sailor Moon', desc: 'A magical girl who fights for love and justice.' },
+      { title: 'Demon Slayer', desc: 'A boy fights demons to save his sister.' },
+      { title: 'Princess Tutu', desc: 'A magical ballerina who heals hearts through dance.' },
+      { title: 'My Hero Academia', desc: 'A powerless boy dreams of becoming a superhero.' }
+    ]
     };
   }
 };
