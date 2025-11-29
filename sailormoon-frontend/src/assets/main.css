@@ -109,8 +109,25 @@ button {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;   /* change this */
-  align-items: center;       /* add this */
+  justify-content: center;
+  align-items: center;
+}
+
+.anime-card {
+  height: 100%;
+}
+
+.anime-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto 12px;
+}
+
+.anime-card button {
+  margin-top: 10px;
 }
 
 /* HOME HERO SECTION */
@@ -202,8 +219,8 @@ p {
 
 .character-img {
   width: 100%;
-  max-width: 320px;    /* bigger */
-  height: 320px;       /* bigger */
+  max-width: 320px;
+  height: 320px;
   object-fit: contain;
   margin: 0 auto 10px;
   display: block;
@@ -212,11 +229,11 @@ p {
 /* DARK MODE */
 
 body.dark-mode {
-  --bg-color: #1b0126;        /* richer, smoother purple */
-  --text-color: #f5d7ff;      /* soft readable lavender */
+  --bg-color: #1b0126;
+  --text-color: #f5d7ff;
   --card-bg: rgba(255, 255, 255, 0.06);
   --border-color: rgba(255, 180, 255, 0.28);
-  --heading-color: #f4c2ff; /* default purple for dark mode */
+  --heading-color: #f4c2ff;
 }
 
 body.dark-mode .hero-text {
@@ -228,7 +245,7 @@ body.dark-mode .subtitle {
 }
 
 body.dark-mode .navbar {
-  background-color: #2e0044;  /* softer navbar purple */
+  background-color: #2e0044;
 }
 
 body.dark-mode button {
@@ -244,7 +261,6 @@ body.dark-mode p {
   color: #f2caff;
 }
 
-/* Change icon tone in dark mode */
 body.dark-mode .icon-btn {
   background: #3a0050;
 }
@@ -256,7 +272,7 @@ body.dark-mode .icon-btn img {
 /* PALETTE DROPDOWN PANEL */
 
 .palette-dropdown {
-  position: fixed;       
+  position: fixed;
   top: 80px;
   right: 16px;
   width: 240px;
@@ -265,7 +281,7 @@ body.dark-mode .icon-btn img {
   padding: 20px 16px;
   box-shadow: 0 20px 50px rgba(0,0,0,0.45);
   border: 2px solid rgba(255,255,255,0.1);
-  z-index: 9999;         
+  z-index: 9999;
   backdrop-filter: blur(10px);
 }
 
@@ -322,12 +338,10 @@ html[data-theme="venus"] body {
   --heading-color: #ffc14d;
 }
 
-
 /* MOBILE RESPONSIVE */
 
 @media (max-width: 768px) {
 
-  /* NAVBAR */
   .navbar {
     flex-direction: column !important;
     align-items: center !important;
@@ -345,7 +359,6 @@ html[data-theme="venus"] body {
     justify-content: center;
   }
 
-  /* FORCE 1 COLUMN LAYOUT */
   .row {
     display: flex !important;
     flex-direction: column !important;
@@ -357,14 +370,12 @@ html[data-theme="venus"] body {
     flex: 0 0 100% !important;
   }
 
-  /* FIX NAV ICON IMAGES */
   .icon-btn img {
     width: 24px !important;
     height: 24px !important;
     max-width: none !important;
   }
 
-  /* CONTENT IMAGES */
   .hero-image,
   .anime-cover,
   .character-img {
@@ -372,7 +383,6 @@ html[data-theme="venus"] body {
     height: auto;
   }
 
-  /* CENTER COLOR PALETTE */
   .palette-dropdown {
     left: 50% !important;
     right: auto !important;
@@ -380,7 +390,6 @@ html[data-theme="venus"] body {
     width: 90vw;
   }
 
-  /* CHARACTER CARD FIX */
   .characters-container .col-md-6 {
     flex: 0 0 100% !important;
     max-width: 100% !important;
@@ -396,7 +405,6 @@ html[data-theme="venus"] body {
 
 }
 
-/* iPhone specific tightening */
 @media (max-width: 480px) {
 
   .character-card {
@@ -405,5 +413,3 @@ html[data-theme="venus"] body {
   }
 
 }
-
-
