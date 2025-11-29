@@ -1,2 +1,19 @@
 # SailorMoon
-An interactive anime-themed web application that showcases favorite series and characters through a multi-page interface. The site includes a home introduction page, an anime list with like buttons, and a Sailor Guardians character page with visual theming inspired by the Sailor Moon universe. Built with Vue 3 and Vite, and styled with Bootstrap and custom CSS, it demonstrates client-side routing, component-based architecture, theme management, and interactive UI behavior. The project emphasizes visual consistency, responsive layout structure, and clean navigation patterns while showcasing modern frontend framework fundamentals.
+
+Project Description:
+SailorMoon is a multi-page website inspired by the Sailor Moon universe. It is built with Vue.js and includes pages for characters, anime listings, and a themed navigation bar. The project uses CSS variables for color themes, along with light/dark mode switching.
+
+Setup Instructions:
+1. Install [Node.js] (https://nodejs.org/en/download) 
+2. Clone the repository
+     git clone repository-url  
+3. Install dependencies
+     npm install 
+4. Start the development server
+     npm run dev 
+5. Open the local development URL
+     (http://localhost:5175)
+
+Framework Used:
+Vue.js
+
