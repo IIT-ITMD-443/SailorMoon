@@ -1,6 +1,6 @@
 # SailorMoon
 
-Project Description:
+Project Description: <br>
 SailorMoon is a multi-page website inspired by the Sailor Moon universe. It is built with Vue.js and includes pages for characters, anime listings, and a themed navigation bar. The project uses CSS variables for color themes, along with light/dark mode switching.
 
 Setup Instructions:
