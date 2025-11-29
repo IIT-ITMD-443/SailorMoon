@@ -6,13 +6,13 @@ SailorMoon is a multi-page website inspired by the Sailor Moon universe. It is b
 Setup Instructions:
 1. Install Node.js (https://nodejs.org/en/download) 
 2. Clone the repository
-    *git clone repository-url  
+     * git clone repository-url  
 3. Install dependencies
-     *npm install 
+     * npm install 
 4. Start the development server
-     *npm run dev 
+     * npm run dev 
 5. Open the local development URL
-     *(http://localhost:5175)
+     * (http://localhost:5175)
 
 Framework Used:
 Vue.js
